@@ -9,20 +9,18 @@ function first(value: { name: string, pname: string }) {
 }
 
 class Person {
-    age: number;
-    constructor(private name: string, private pnam: string, a: number) {
-        this.age = a;
-    }
+
+    constructor(private name: string, private pnam: string, private age: number) { }
 
     @first({
-        name: "bojour",
-        pname: "bebe"
+        name: "Juste",
+        pname: "Marion"
     })
-    fullName() {
-        return `${this.name} ${this.pnam}`;
+    fullName(greetings: string) {
+        return `${greetings} ${this.name} ${this.pnam}`;
     }
 }
 
 const pns = new Person('Chelsea', 'MVOLO', 16);
 
-console.log(pns.fullName());
+console.log(pns.fullName('Bienvenue'));
