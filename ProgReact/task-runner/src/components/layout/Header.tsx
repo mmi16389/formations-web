@@ -1,6 +1,15 @@
-import PropTypes from 'prop-types'
+import * as React from 'react';
+//import PropTypes from 'prop-types'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
-const Header = ({ title }) => {
+export interface Props {
+    /** The user's name */
+    title: string;
+    /** Should the name be rendered in bold */
+    priority?: boolean
+}
+
+const Header: React.FC<Props> = ({ title }) => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -21,8 +30,8 @@ const Header = ({ title }) => {
                     <Nav>
                         <Nav.Link href="#deets">More deets</Nav.Link>
                         <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
-      </Nav.Link>
+                            {title}
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -33,7 +42,7 @@ Header.defaultProps = {
     title: 'Task Runner '
 }
 
-Header.propsTypes = {
-    title: PropTypes.string.isRequired
-}
+// Header.propsTypes = {
+//     title: PropTypes.string.isRequired
+// }
 export default Header; 

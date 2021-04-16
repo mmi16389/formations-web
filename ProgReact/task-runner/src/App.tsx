@@ -1,12 +1,12 @@
 import './App.css';
 import { Header } from './components/layout'
+import { Task } from './components/Tracker'
 
 function App() {
   return (
     <>
-      <div className="container">
-        <Header/>
-      </div>
+      <Header title="Header" />
+      <Task />
     </>
   );
 }
