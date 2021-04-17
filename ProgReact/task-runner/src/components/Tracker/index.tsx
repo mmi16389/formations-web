@@ -1,4 +1,4 @@
-import Task from './Task'
+import TaskComponent from './Task'
 export {
-    Task
+    TaskComponent
 }

@@ -9,7 +9,7 @@ export interface Props {
     priority?: boolean
 }
 
-const Header: React.FC<Props> = ({ title }) => {
+const HeaderComponent: React.FC<Props> = ({ title }) => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -38,11 +38,11 @@ const Header: React.FC<Props> = ({ title }) => {
         </>
     )
 }
-Header.defaultProps = {
+HeaderComponent.defaultProps = {
     title: 'Task Runner '
 }
 
 // Header.propsTypes = {
 //     title: PropTypes.string.isRequired
 // }
-export default Header; 
+export default HeaderComponent; 
