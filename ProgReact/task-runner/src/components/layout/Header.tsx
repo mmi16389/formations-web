@@ -1,6 +1,6 @@
 import * as React from 'react';
 //import PropTypes from 'prop-types'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 export interface Props {
     /** The user's name */
@@ -12,28 +12,10 @@ export interface Props {
 const HeaderComponent = ({ title }: Partial<Props>) => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Brand href="#home">{title}</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-                    <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            {title}
-                        </Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
+            <Navbar collapseOnSelect expand="lg" bg="white" variant="dark" style={{borderBottom: "1px solid rgba(0,0,0,.1)", borderTop: "1px solid rgba(0,0,0,.1)"}}>
+                {['ENTRER UNE FEUILLE DE PRESTATIONS', 'NOTES DE FRAIS', 'SOUMETTRE LA FACTURE', 'HISTORIQUE', 'ENTREPRISE', 'AIDE'].map((el, index) => (
+                    <Nav.Link key={index} href="#home">{`${el}`}</Nav.Link>
+                ))}
             </Navbar>
         </>
     )
@@ -41,8 +23,4 @@ const HeaderComponent = ({ title }: Partial<Props>) => {
 HeaderComponent.defaultProps = {
     title: 'Task Runner '
 }
-
-// Header.propsTypes = {
-//     title: PropTypes.string.isRequired
-// }
 export default HeaderComponent; 

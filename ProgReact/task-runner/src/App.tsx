@@ -1,14 +1,20 @@
 import * as React from 'react';
-import * as RComponent from './components' 
+import * as RComponent from './components'
 
 // import { api } from './services'
 
-  class App extends React.Component{
-  
+class App extends React.Component {
+
   render() {
     return (
       <>
-        <RComponent.Layout.Menu />
+        <div>
+          <RComponent.Layout.Menu />
+        </div>
+        <div style={{ marginTop: "220px" }}>
+          <RComponent.Layout.Main />
+        </div>
+
       </>
     );
   }
