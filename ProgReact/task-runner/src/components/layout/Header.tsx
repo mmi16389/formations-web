@@ -6,14 +6,14 @@ export interface Props {
     /** The user's name */
     title: string;
     /** Should the name be rendered in bold */
-    priority?: boolean
+    priority: boolean
 }
 
-const HeaderComponent: React.FC<Props> = ({ title }) => {
+const HeaderComponent = ({ title }: Partial<Props>) => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="#home">{title}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
