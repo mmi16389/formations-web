@@ -6,7 +6,7 @@ import { Console } from 'console';
 
   type RouteRC ={
       path: string,
-      component: React.ReactNode
+      component: React.ElementType
   }
 export const routesURL: RouteRC[] = [
     {
@@ -31,11 +31,11 @@ export const routesURL: RouteRC[] = [
     }
 ];
 
-export const RenderComponent = ({path, component}: any) => {
-    const RenderFC = component
+export const RenderComponent = (props: RouteRC) => {
+    let RenderFC = props.component 
     return (
       <Route
-        path={path}
+        path={props.path}
         render={props => (
           // pass the sub-routes down to keep nesting
           <RenderFC {...props}/>
