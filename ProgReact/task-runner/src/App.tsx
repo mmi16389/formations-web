@@ -11,7 +11,7 @@ class App extends React.Component {
         <div>
           <RComponent.Layout.Menu />
         </div>
-        <div style={{ marginTop: "220px" }}>
+        <div style={{ marginTop: "60px" }}>
           <RComponent.Layout.Main />
         </div>
 

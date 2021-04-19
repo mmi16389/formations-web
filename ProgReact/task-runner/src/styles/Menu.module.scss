@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100&family=Red+Hat+Display&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100&family=Red+Hat+Display&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Francois+One&family=Lobster+Two:wght@700&display=swap');
 .Logo {
   background-color: white;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: "Roboto Slab", serif;
   /*background-image: url(../assets/background.png);
   background-position: center; /* Center the image */
   /*background-repeat: no-repeat; /* Do not repeat the image */
   /*background-size: cover;*/
+}
+
+.FontLogoTitle {
+  font-family: 'Lobster Two', cursive;
 }
