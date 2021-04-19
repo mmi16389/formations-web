@@ -1,8 +1,2 @@
-import { TaskComponent } from './Tracker';
-import { HeaderComponent } from './layout'
-
-
-export {
-    TaskComponent as Task ,
-    HeaderComponent as Header
-}
+export  * as Task from './Tracker';
+export  * as Layout from './layout';

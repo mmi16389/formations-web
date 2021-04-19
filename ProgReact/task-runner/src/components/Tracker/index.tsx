@@ -1,4 +1,2 @@
-import TaskComponent from './Task'
-export {
-    TaskComponent
-}
+export { default as Task } from './Task'
+ 

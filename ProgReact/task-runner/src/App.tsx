@@ -1,41 +1,14 @@
 import * as React from 'react';
-import { Header, Task } from './components'
-import { TaskType } from './components/Tracker/Task'
+import * as RComponent from './components' 
 
-import { api } from './services'
+// import { api } from './services'
 
- 
-type State = { tasks: TaskType[]};
-
-class App extends React.Component<any, State> {
-  state: State = {
-    tasks: []
-  }
- 
-  componentDidMount():void{
-    api.taskService.getAllTask().then((response)=>{
-             this.setState((state: Pick<State, 'tasks'>)=> {return {tasks: response.data}})
-   })
-  }
-
-  onDeleteTask = (id: number) => {
-    this.setState((state: Pick<State, 'tasks'>) => {
-      return { tasks: state.tasks.filter((task: TaskType) => task.id !== id)}
-    });
-  }
-  onToggle = (id: number) => {
-    this.setState((state: Pick<State, 'tasks'>) => { 
-      return {
-         tasks:state.tasks.map((task:TaskType)=> task.id ===id?{...task, reminder:!task.reminder}:task)
-      }
-    })
-  }
-
+  class App extends React.Component{
+  
   render() {
     return (
       <>
-        <Header/>
-        { this.state.tasks.length > 0 ? <Task tasks={this.state.tasks} onDelete={this.onDeleteTask} onToggle={this.onToggle} /> : <div>Pas de tache</div>}
+        <RComponent.Layout.Menu />
       </>
     );
   }

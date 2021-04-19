@@ -1,9 +1,14 @@
+import * as React from 'react';
+import Header from './Header'
 
-const MenuComponent = ()=> {
+type Props ={
+    children?: React.ReactNode
+}
+const MenuComponent = ({children}: Props)=> {
 
 return(
     <>
-        <div>MENU</div>
+        <Header/> 
     </>
 )
 }
