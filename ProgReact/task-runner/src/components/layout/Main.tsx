@@ -1,11 +1,13 @@
 import Footer from './Footer'
-
-const Main = () => {
+type Props = {
+    children?: React.ReactNode
+}
+const Main = ({children}: Props) => {
     return (
         <>
-            <div style={{ minHeight: "800px"}}>
+            <div style={{ minHeight: "500px"}}>
                 <main>
-                    <div>Hello</div>
+                    {children}
                 </main>
             </div>
             <Footer />

@@ -1,6 +1,9 @@
 import * as React from 'react';
 //import PropTypes from 'prop-types'
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import {
+    NavLink
+  } from "react-router-dom";
 
 export interface Props {
     /** The user's name */
@@ -13,22 +16,32 @@ const menu = ['ENTRER UNE FEUILLE DE PRESTATIONS', 'NOTES DE FRAIS', 'SOUMETTRE 
 const HeaderComponent = ({ title }: Partial<Props>) => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="white" variant="dark" style={{ borderBottom: "1px solid rgba(0,0,0,.1)", borderTop: "1px solid rgba(0,0,0,.1)" }}>
+            <Navbar collapseOnSelect expand="lg" bg="white" variant="dark" style={{ borderBottom: "1px solid rgba(0,0,0,.1)", borderTop: "0px solid rgba(0,0,0,.1)" }}>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                   
+                            <NavLink className="nav-link" to="/cra">Entree Feuille d'activite</NavLink>
+                       
+                      
+                            <NavLink className="nav-link" to="/frais">Note de Frais</NavLink>
+                      
+                        
+                            <NavLink className="nav-link" to="/factures">
+                            Editer Factures
+                            </NavLink>
+                      
+                        <NavDropdown title="Historiques" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">Aide</NavDropdown.Item>
                         </NavDropdown>
+                      
+                            <NavLink className="nav-link"  to="/aides">Entreprise</NavLink>
+                        
                     </Nav>
                     {/* <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
