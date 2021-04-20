@@ -40,7 +40,7 @@ const HeaderComponent = ({ title }: Partial<Props>) => {
                             <NavDropdown.Item href="#action/3.4">Aide</NavDropdown.Item>
                         </NavDropdown>
                       
-                            <NavLink className="nav-link"  to="/aides">Entreprise</NavLink>
+                            <NavLink className="nav-link"  to="/Entreprise">Entreprise</NavLink>
                         
                     </Nav>
                     {/* <Form inline>

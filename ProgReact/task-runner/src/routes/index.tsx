@@ -28,6 +28,10 @@ export const routesURL: RouteRC[] = [
   {
     path: "/Aides",
     component: FComponent.Workflow.Aide
+  },
+  {
+    path: "/Entreprise",
+    component: FComponent.Workflow.Entreprise
   }
 ];
 
