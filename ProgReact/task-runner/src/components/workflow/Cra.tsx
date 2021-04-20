@@ -1,10 +1,10 @@
-const Cra= ()=>{
+const Cra = () => {
 
-    return (
-        <>
-          <div>Cra</div>
-        </>
-    )
+  return (
+    <>
+      <div>Cra</div>
+    </>
+  )
 }
 
 export default Cra;

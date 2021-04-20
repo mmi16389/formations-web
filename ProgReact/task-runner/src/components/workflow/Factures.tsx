@@ -1,10 +1,10 @@
-const Factures= ()=>{
+const Factures = () => {
 
-    return (
-        <>
-          <div>Factures</div>
-        </>
-    )
+  return (
+    <>
+      <div>Factures</div>
+    </>
+  )
 }
 
 export default Factures;

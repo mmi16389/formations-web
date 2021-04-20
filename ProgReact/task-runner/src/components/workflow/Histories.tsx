@@ -1,10 +1,10 @@
-const Histories= ()=>{
+const Histories = () => {
 
-    return (
-        <>
-          <div>Histories</div>
-        </>
-    )
+  return (
+    <>
+      <div>Histories</div>
+    </>
+  )
 }
 
 export default Histories;
