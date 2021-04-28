@@ -6,10 +6,16 @@ import java.util.Optional;
 
 import com.xdevopps.personalmanager.persistence.model.Employee;
 import com.xdevopps.personalmanager.persistence.repository.IEmployeeRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class EmployeeRepositoryImpl implements IEmployeeRepository{
 	
 	List<Employee> employees = new ArrayList<>();
+
+	public EmployeeRepositoryImpl() {
+		super();
+	}
 
 	@Override
 	public Optional<Employee> findById(Long id) {
