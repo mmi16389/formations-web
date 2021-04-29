@@ -9,9 +9,12 @@ import com.xdevopps.personalmanager.persistence.model.Employee;
 import com.xdevopps.personalmanager.service.IEmployeeService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
+
 @Service
 public class EmployeeServiceImpl implements IEmployeeService{
 
+    @Autowired
 	private IEmployeeRepository employeeRepo;
 
 	public EmployeeServiceImpl() {
@@ -28,8 +31,4 @@ public class EmployeeServiceImpl implements IEmployeeService{
 		return employeeRepo.save(employee);
 	}
 
-	@Autowired
-	public void setEmployeeRepo(IEmployeeRepository employeeRepo) {
-		this.employeeRepo = employeeRepo;
-	}
 }
