@@ -1,16 +1,15 @@
 package com.xdevopps.personalmanager.config;
 
 
-import com.xdevopps.personalmanager.persistence.repository.impl.EmployeeRepositoryImpl;
-import com.xdevopps.personalmanager.shareable.Language;
+import com.xdevopps.personalmanager.admin.Admin;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
-@Configuration
+//@Configuration
 public class PersistenceConfig {
-	/*@Bean
-	public EmployeeRepositoryImpl employeeRepository() {
-		return new EmployeeRepositoryImpl();
-	}*/
+    @Bean
+    public static Admin adminBean() {
+        return new Admin();
+    }
 }

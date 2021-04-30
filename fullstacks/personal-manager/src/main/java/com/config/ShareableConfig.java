@@ -1,6 +1,5 @@
 package com.config;
 
-
 import com.xdevopps.personalmanager.persistence.repository.impl.EmployeeRepositoryImpl;
 import com.xdevopps.personalmanager.shareable.Language;
 import org.springframework.context.annotation.Bean;
